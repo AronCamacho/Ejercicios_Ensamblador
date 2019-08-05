@@ -102,7 +102,7 @@ _start:
 	mov esi, 2		;posicion del numero
 	clc			;permite poner la bandera del carry en 0(cf=0)
 
-operacion_suma:
+operacion_resta:
 
 	mov al, [texto + esi]
 	sbb al, [texto2 + esi]	; suma normal + carry(esta en binario)
@@ -117,7 +117,7 @@ operacion_suma:
 	
 	mov [suma + esi], al	
 	dec esi
-	loop operacion_suma
+	loop operacion_resta
 	escribir msj, len
 	escribir suma, 3
 
