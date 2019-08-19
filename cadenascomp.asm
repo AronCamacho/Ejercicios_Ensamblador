@@ -1,3 +1,8 @@
+;UNIVERSIDAD NACIONAL DE LOJA
+;LENGUAJE ENSAMBLADOR
+;ARON CAMACHO 6TO "A"
+
+
 segment .data 
 	msg1 db  0xA,0x9,"escriba una cadena",0xA
 	len1 equ $- msg1
