@@ -3,7 +3,7 @@
 	mov ebx, 1
 	mov ecx, %1 
 	mov edx, %2
-	int 0x80
+	int 80h
 %endmacro
 segment .data 
 	msg1 db 0xA,0xA,0x9,"INTRODUZCA UNA CADENA: "
@@ -37,12 +37,12 @@ lee:
 	global _start  
 _start:  
 
-	mov eax,8         ; the number of the syscall 'open'
+	mov eax,8        
 	mov ebx,archivo
-	mov ecx, 2  		;lect
-	;mov edx,7777h     ; all file permissions flags
+	mov ecx, 2  		
+	;mov edx,7777h     
 	mov edx, 7777h
-	int 80h              ; interrupt 80h
+	int 80h              
 
 	test eax,eax
 	jz salir
@@ -101,4 +101,4 @@ salir:
 
 	mov eax, 1  
 	xor ebx, ebx 
-	int 0x80
+	int 80h
