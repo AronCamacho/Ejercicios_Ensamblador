@@ -79,8 +79,7 @@ _start:
 
 	escribe msg5, len5
 
-	;sub edi, 100
-	;sub edi, 49
+
 	sub edi, '0'
 
 	mov [pos], edi
