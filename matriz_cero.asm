@@ -1,3 +1,7 @@
+;UNIVERSIDAD NACIONAL DE LOJA
+;LENGUAJE ENSAMBLADOR
+;ARON CAMACHO 6TO "A"
+
 %macro escribir 2
 	mov eax, 4
 	mov ebx, 1
