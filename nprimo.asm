@@ -1,3 +1,7 @@
+;UNIVERSIDAD NACIONAL DE LOJA
+;LENGUAJE ENSAMBLADOR
+;ARON CAMACHO 6TO "A"
+
 
 ;Pedir un numero del 1 al 5 y ver si es primo o no
 
