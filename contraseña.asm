@@ -23,7 +23,8 @@ segment .data
 	clr    db 0x1b, "[34;47;3m",0x1b, "[2J",0x1b, "[5;20f"
  	clrlen equ $ - clr
 
- 	archivo db "/home/neomatrix/c0de/assescuela/contrasenas/contrasenas.txt",0
+ 	archivo db "/home/aron/Documentos/Programacion/ensamblador/contrasena.txt",0
+
 
 
 segment .bss
