@@ -20,11 +20,6 @@ segment .data
 	espacio db  0xA
 	lespacio equ $- espacio
 
-	;res db "         "
-	;lenr equ $- res
-
-	;res2 db "         "
-	;lenr2 equ $- res2 
 
 segment .bss
 	res resb 10
@@ -36,7 +31,7 @@ segment .text
 lee:
 	mov eax, 3
 	mov ebx, 0
-	int 0x80
+	int 80h
 	ret
 
 	global _start  
@@ -46,7 +41,7 @@ _start:
 	mov ebx, 1
 	mov ecx, msg1
 	mov edx, len1
-	int 0x80 
+	int 80h 
 
 	mov ecx, res 
 	mov edx, 10
@@ -77,17 +72,17 @@ _start:
 	mov ebx, 1
 	mov ecx, msg4
 	mov edx, len4
-	int 0x80 
+	int 80h 
 
     jmp salir
 
-;___________________________________________
+
 noiguales:
 	mov eax, 4 
 	mov ebx, 1
 	mov ecx, msg3
 	mov edx, len3
-	int 0x80 
+	int 80h 
 
 
 salir:
@@ -102,27 +97,27 @@ salir:
 	mov ebx, 1
 	mov ecx, msg5
 	mov edx, len5
-	int 0x80 
+	int 80h 
 
 	mov eax, 4 
 	mov ebx, 1
 	mov ecx, res
 	mov edx, 10
-	int 0x80 
+	int 80h 
 
 	mov eax, 4 
 	mov ebx, 1
 	mov ecx, espacio
 	mov edx, lespacio
-	int 0x80 
+	int 80h 
 
 	mov eax, 4 
 	mov ebx, 1
 	mov ecx, res2
 	mov edx, 10
-	int 0x80 
+	int 80h 
 
 
 	mov eax, 1  
 	xor ebx, ebx 
-	int 0x80
+	int 80h
