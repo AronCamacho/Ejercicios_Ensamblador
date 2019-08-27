@@ -8,7 +8,7 @@
 	mov ebx, 1
 	mov ecx, %1 
 	mov edx, %2
-	int 0x80
+	int 80h
 %endmacro
 segment .data 
 	msg1 db 0xA,0xA,"menu:", 0xA,0x9, "1)suma", 0xA,0x9, "2)resta", 0xA,0x9, "3)salir",0xA,0xA,0x9
@@ -24,7 +24,7 @@ segment .text
 lee:
 	mov eax, 3 
 	mov ebx, 0
-	int 0x80
+	int 80h
 	ret
 
 	global _start  
