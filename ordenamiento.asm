@@ -24,7 +24,7 @@ _start:
 	mov ebx, 1
 	mov ecx, msg1
 	mov edx, len1
-	int 0x80 
+	int 80h 
 
 
 mov esi, arre
@@ -34,7 +34,7 @@ lee:
 	mov ebx, 0 
 	mov ecx, res
 	mov edx, 2
-	int 0x80 
+	int 80h 
 	
 	mov al, [res]
 	sub al, '0'
@@ -85,7 +85,7 @@ imprimir:
 	mov ebx, 1
 	mov ecx, msg3 
 	mov edx, len3
-	int 0x80
+	int 80h
 
 
 
@@ -93,9 +93,9 @@ imprimir:
 	mov ebx, 1
 	mov ecx, arre
 	mov edx, la
-	int 0x80
+	int 80h
 
 salir:
 	mov eax, 1  
 	xor ebx, ebx 
-	int 0x80
+	int 80h
